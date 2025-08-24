@@ -43,7 +43,10 @@ class API {
       final response = await _dio.get(
         url,
         queryParameters: queryParameters,
-        options: Options(headers: await _header()),
+        options: Options(
+          headers: await _header(),
+          validateStatus: (status) => true,
+        ),
         cancelToken: cancelToken,
         onReceiveProgress: onReceiveProgress,
       );
@@ -67,7 +70,10 @@ class API {
         url,
         data: data,
         queryParameters: queryParameters,
-        options: Options(headers: await _header()),
+        options: Options(
+          headers: await _header(),
+          validateStatus: (status) => true,
+        ),
         onSendProgress: onSendProgress,
         onReceiveProgress: onReceiveProgress,
       );
@@ -92,7 +98,10 @@ class API {
         url,
         data: data,
         queryParameters: queryParameters,
-        options: Options(headers: await _header()),
+        options: Options(
+          headers: await _header(),
+          validateStatus: (status) => true,
+        ),
         cancelToken: cancelToken,
         onSendProgress: onSendProgress,
         onReceiveProgress: onReceiveProgress,
@@ -116,7 +125,10 @@ class API {
         url,
         data: data,
         queryParameters: queryParameters,
-        options: Options(headers: await _header()),
+        options: Options(
+          headers: await _header(),
+          validateStatus: (status) => true,
+        ),
         cancelToken: cancelToken,
       );
       return response;
@@ -124,7 +136,6 @@ class API {
       throw Exception(_handleDioError(e as DioException));
     }
   }
-
 
   /// Handles errors from Dio
   static String _handleDioError(DioException e) {

@@ -1,5 +1,7 @@
 class AppConstants {
   static const fontFamily = 'Poppins';
+  static const userKey = 'user';
+  static const tokenKey = 'token';
 }
 
 class APIConstants {

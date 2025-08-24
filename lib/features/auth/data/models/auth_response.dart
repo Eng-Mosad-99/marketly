@@ -19,6 +19,15 @@ class AuthResponse {
       statusMsg: json['statusMsg'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'message': message,
+      'token': token,
+      'user': user.toJson(),
+      'statusMsg': statusMsg,
+    };
+  }
 }
 
 class UserModel {
