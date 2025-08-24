@@ -39,6 +39,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   svg_flutter: ^0.0.1
   auto_size_text: ^3.0.0
+  dartz: ^0.10.1
+  dio: ^5.9.0
 
 dev_dependencies:
   flutter_test:
