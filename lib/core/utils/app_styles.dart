@@ -43,4 +43,8 @@ class AppStyles {
     color: ColorManager.primaryColor,
     fontFamily: AppConstants.fontFamily,
   );
+    static TextStyle medium18Header = TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeight.w500,
+      color: ColorManager.primaryColor);
 }

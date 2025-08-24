@@ -1,9 +1,8 @@
 // ignore_for_file: constant_identifier_names
 const String imagePath = 'assets/images';
-const String svgPath = 'assets/svg';
 
 class AppAssets {
-  static const String logo = '$svgPath/logo.svg';
+  static const String logo = 'assets/images/MoMarket_logo.png';
   static const String onboarding1 = '$imagePath/onboarding_1.png';
   static const String onboarding2 = '$imagePath/onboarding_2.png';
   static const String onboarding3 = '$imagePath/onboarding_3.png';
