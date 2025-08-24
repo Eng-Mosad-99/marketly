@@ -8,7 +8,8 @@ import 'package:marketly/core/utils/app_styles.dart';
 import 'package:marketly/core/utils/color_manager.dart';
 import 'package:marketly/core/widgets/custom_elevated_button.dart';
 import 'package:marketly/core/widgets/custom_text_form_field.dart';
-import 'package:svg_flutter/svg.dart';
+
+import 'widgets/custom_logo_image.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -24,13 +25,7 @@ class SignInView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 100.w, vertical: 50.h),
-                  child: Image.asset(
-                    AppAssets.logo,
-                  ),
-                ),
+                const CustomLogoImage(),
                 verticalSpace(40),
                 Text(
                   AppStrings.welcomeSignIn,
@@ -84,27 +79,26 @@ class SignInView extends StatelessWidget {
                   textStyle: AppStyles.semiBold20Primary,
                 ),
                 verticalSpace(20),
-               Text.rich(
-  TextSpan(
-    children: [
-      TextSpan(
-        text: ' ${AppStrings.dontHaveAccount}',
-        style: AppStyles.medium18White,
-      ),
-      TextSpan(
-        text: ' ${AppStrings.createAccount}',
-        style: AppStyles.medium18White,
-        recognizer: TapGestureRecognizer()
-          ..onTap = () {
-            // TODO: Navigate to your sign up page
-            // Navigator.pushNamed(context, '/signUp');
-          },
-      ),
-    ],
-  ),
-  textAlign: TextAlign.center,
-),
-                
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: ' ${AppStrings.dontHaveAccount}',
+                        style: AppStyles.medium18White,
+                      ),
+                      TextSpan(
+                        text: ' ${AppStrings.createAccount}',
+                        style: AppStyles.medium18White,
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            // TODO: Navigate to your sign up page
+                            // Navigator.pushNamed(context, '/signUp');
+                          },
+                      ),
+                    ],
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               ],
             ),
           ),
